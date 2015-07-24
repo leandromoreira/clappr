@@ -14,6 +14,7 @@ var find = require('lodash.find')
  * @class HTML5Video
  * @constructor
  * @extends Playback
+ * @module playback
  * @example
  *     var video = new HTML5Video({src: 'http://example.com/example.mpd'})
  *     //starts to play the video

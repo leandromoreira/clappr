@@ -11,6 +11,7 @@ var slice = Array.prototype.slice
 /**
  * @class Events
  * @constructor
+ * @module base
  * @example
  *     var video = new HTML5Video({src: 'http://example.com/example.mpd'})
  *     //starts to play the video

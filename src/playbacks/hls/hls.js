@@ -17,6 +17,16 @@ var HLSEvents = require('./flashls_events')
 
 var objectIE = '<object type="application/x-shockwave-flash" id="<%= cid %>" class="hls-playback" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" data-hls="" width="100%" height="100%"><param name="movie" value="<%= baseUrl %>/assets/HLSPlayer.swf"> <param name="quality" value="autohigh"> <param name="swliveconnect" value="true"> <param name="allowScriptAccess" value="always"> <param name="bgcolor" value="#001122"> <param name="allowFullScreen" value="false"> <param name="wmode" value="transparent"> <param name="tabindex" value="1"> <param name=FlashVars value="playbackId=<%= playbackId %>" /> </object>'
 
+/**
+ * @class HLS
+ * @constructor
+ * @extends Playback
+ * @module playback
+ * @example
+ *     var video = new HTML5Video({src: 'http://example.com/example.mpd'})
+ *     //starts to play the video
+ *     video.play()
+ */
 class HLS extends Playback {
   get name() { return 'hls' }
   get tagName() { return 'object' }

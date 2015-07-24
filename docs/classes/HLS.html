@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Events - Clappr</title>
+    <title>HLS - Clappr</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -80,15 +80,18 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1>Events Class</h1>
+<h1>HLS Class</h1>
 <div class="box meta">
 
-
-        <div class="foundat">
-            Defined in: <a href="../files/src_base_events.js.html#l11"><code>src&#x2F;base&#x2F;events.js:11</code></a>
+        <div class="extends">
+            Extends <a href="../classes/Playback.html" class="crosslink">Playback</a>
         </div>
 
-            Module: <a href="../modules/base.html">base</a>
+        <div class="foundat">
+            Defined in: <a href="../files/src_playbacks_hls_hls.js.html#l20"><code>src&#x2F;playbacks&#x2F;hls&#x2F;hls.js:20</code></a>
+        </div>
+
+            Module: <a href="../modules/playback.html">playback</a>
 
 </div>
 
@@ -99,8 +102,8 @@
 
     <div class="constructor">
         <h2>Constructor</h2>
-<div id="method_Events" class="method item">
-    <h3 class="name"><code>Events</code></h3>
+<div id="method_HLS" class="method item">
+    <h3 class="name"><code>HLS</code></h3>
 
         <span class="paren">()</span>
 
@@ -114,7 +117,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_base_events.js.html#l11"><code>src&#x2F;base&#x2F;events.js:11</code></a>
+        <a href="../files/src_playbacks_hls_hls.js.html#l20"><code>src&#x2F;playbacks&#x2F;hls&#x2F;hls.js:20</code></a>
         </p>
 
 
@@ -145,89 +148,124 @@ video.play()</code></pre>
     <ul class="api-class-tabs">
         <li class="api-class-tab index"><a href="#index">Index</a></li>
 
-            <li class="api-class-tab events"><a href="#events">Events</a></li>
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
     </ul>
 
     <div>
         <div id="index" class="api-class-tabpanel index">
             <h2 class="off-left">Item Index</h2>
 
+                <div class="index-section methods">
+                    <h3>Methods</h3>
 
-
-
-                <div class="index-section events">
-                    <h3>Events</h3>
-
-                    <ul class="index-list events">
-                            <li class="index-item event">
-                                <a href="#event_MEDIACONTROL_CONTAINERCHANGED">MEDIACONTROL_CONTAINERCHANGED</a>
+                    <ul class="index-list methods extends">
+                            <li class="index-item method inherited">
+                                <a href="#method_constructor">constructor</a>
 
                             </li>
-                            <li class="index-item event">
-                                <a href="#event_MEDIACONTROL_PLAYING">MEDIACONTROL_PLAYING</a>
+                            <li class="index-item method inherited">
+                                <a href="#method_play">play</a>
 
                             </li>
                     </ul>
                 </div>
+
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_constructor" class="method item inherited">
+    <h3 class="name"><code>constructor</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>general</code>
+                </li>
+            </ul><span class="paren">)</span>
         </div>
 
 
 
 
-            <div id="events" class="api-class-tabpanel">
-                <h2 class="off-left">Events</h2>
 
-                    <div id="event_MEDIACONTROL_CONTAINERCHANGED" class="events item">
-                        <h3 class="name"><code>MEDIACONTROL_CONTAINERCHANGED</code></h3>
-                        <span class="type"></span>
-                    
-                    
-                    
-                    
-                    
-                        <div class="meta">
-                                    <p>
-                                    Defined in
-                            <a href="../files/src_base_events.js.html#l222"><code>src&#x2F;base&#x2F;events.js:222</code></a>
-                            </p>
-                    
-                    
-                        </div>
-                    
-                        <div class="description">
-                            <p>Fired when an media control container changes</p>
-                    
-                        </div>
-                    
-                    
-                    
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/Playback.html#method_constructor">Playback</a>:
+        <a href="../files/src_base_playback.js.html#l11"><code>src&#x2F;base&#x2F;playback.js:11</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>constructor.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">general</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+
+                    <div class="param-description">
+                        <p>options</p>
+
                     </div>
-                    <div id="event_MEDIACONTROL_PLAYING" class="events item">
-                        <h3 class="name"><code>MEDIACONTROL_PLAYING</code></h3>
-                        <span class="type"></span>
-                    
-                    
-                    
-                    
-                    
-                        <div class="meta">
-                                    <p>
-                                    Defined in
-                            <a href="../files/src_base_events.js.html#l215"><code>src&#x2F;base&#x2F;events.js:215</code></a>
-                            </p>
-                    
-                    
-                        </div>
-                    
-                        <div class="description">
-                            <p>Fired when an media control starts to play</p>
-                    
-                        </div>
-                    
-                    
-                    
-                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_play" class="method item inherited">
+    <h3 class="name"><code>play</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/Playback.html#method_play">Playback</a>:
+        <a href="../files/src_base_playback.js.html#l22"><code>src&#x2F;base&#x2F;playback.js:22</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>play.</p>
+
+    </div>
+
+
+
+
+</div>
             </div>
+
+
+
     </div>
 </div>
                     </div>

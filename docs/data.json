@@ -9,7 +9,9 @@
     "files": {
         "src/base/events.js": {
             "name": "src/base/events.js",
-            "modules": {},
+            "modules": {
+                "base": 1
+            },
             "classes": {
                 "Events": 1
             },
@@ -67,6 +69,17 @@
             "fors": {},
             "namespaces": {}
         },
+        "src/playbacks/hls/hls.js": {
+            "name": "src/playbacks/hls/hls.js",
+            "modules": {
+                "playback": 1
+            },
+            "classes": {
+                "HLS": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "src/playbacks/html5_video/html5_video.js": {
             "name": "src/playbacks/html5_video/html5_video.js",
             "modules": {},
@@ -77,7 +90,34 @@
             "namespaces": {}
         }
     },
-    "modules": {},
+    "modules": {
+        "base": {
+            "name": "base",
+            "submodules": {},
+            "classes": {
+                "Events": 1,
+                "Playback": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/base/playback.js",
+            "line": 4
+        },
+        "playback": {
+            "name": "playback",
+            "submodules": {},
+            "classes": {
+                "HLS": 1,
+                "HTML5Video": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/playbacks/html5_video/html5_video.js",
+            "line": 13
+        }
+    },
     "classes": {
         "Events": {
             "name": "Events",
@@ -87,6 +127,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
+            "module": "base",
             "file": "src/base/events.js",
             "line": 11,
             "is_constructor": 1,
@@ -102,10 +143,30 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
+            "module": "base",
+            "namespace": "",
             "file": "src/base/playback.js",
             "line": 4,
             "is_constructor": 1,
             "extends": "UIObject"
+        },
+        "HLS": {
+            "name": "HLS",
+            "shortname": "HLS",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "playback",
+            "namespace": "",
+            "file": "src/playbacks/hls/hls.js",
+            "line": 20,
+            "is_constructor": 1,
+            "extends": "Playback",
+            "example": [
+                "\n    var video = new HTML5Video({src: 'http://example.com/example.mpd'})\n    //starts to play the video\n    video.play()"
+            ]
         },
         "HTML5Video": {
             "name": "HTML5Video",
@@ -115,6 +176,8 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
+            "module": "playback",
+            "namespace": "",
             "file": "src/playbacks/html5_video/html5_video.js",
             "line": 13,
             "is_constructor": 1,
@@ -127,19 +190,21 @@
     "classitems": [
         {
             "file": "src/base/events.js",
-            "line": 214,
+            "line": 215,
             "description": "Fired when an media control starts to play",
             "itemtype": "event",
             "name": "MEDIACONTROL_PLAYING",
-            "class": "Events"
+            "class": "Events",
+            "module": "base"
         },
         {
             "file": "src/base/events.js",
-            "line": 221,
+            "line": 222,
             "description": "Fired when an media control container changes",
             "itemtype": "event",
             "name": "MEDIACONTROL_CONTAINERCHANGED",
-            "class": "Events"
+            "class": "Events",
+            "module": "base"
         },
         {
             "file": "src/base/playback.js",
@@ -154,7 +219,8 @@
                     "type": "Object"
                 }
             ],
-            "class": "Playback"
+            "class": "Playback",
+            "module": "base"
         },
         {
             "file": "src/base/playback.js",
@@ -162,93 +228,105 @@
             "description": "play.",
             "itemtype": "method",
             "name": "play",
-            "class": "Playback"
+            "class": "Playback",
+            "module": "base"
         },
         {
             "file": "src/components/container/container.js",
             "line": 5,
             "description": "Container is responsible for the video rendering and state",
-            "class": "HTML5Video"
+            "class": "HLS",
+            "module": "base"
         },
         {
             "file": "src/components/container_factory/container_factory.js",
             "line": 5,
             "description": "The ContainerFactory is responsible for manage playback bootstrap and create containers.",
-            "class": "HTML5Video"
+            "class": "HLS",
+            "module": "base"
         },
         {
             "file": "src/components/core/core.js",
             "line": 5,
             "description": "The Core is responsible to manage Containers, the mediator, MediaControl\nand the player state.",
-            "class": "HTML5Video"
+            "class": "HLS",
+            "module": "base"
         },
         {
             "file": "src/components/core_factory/core_factory.js",
             "line": 5,
             "description": "The Core Factory is responsible for instantiate the core and it's plugins.",
-            "class": "HTML5Video"
+            "class": "HLS",
+            "module": "base"
         },
         {
             "file": "src/components/media_control/media_control.js",
             "line": 5,
             "description": "The MediaControl is responsible for displaying the Player controls.",
-            "class": "HTML5Video"
+            "class": "HLS",
+            "module": "base"
         },
         {
             "file": "src/components/mediator.js",
             "line": 5,
             "description": "The mediator is a singleton for handling global events.",
-            "class": "HTML5Video"
+            "class": "HLS",
+            "module": "base"
         },
         {
             "file": "src/playbacks/html5_video/html5_video.js",
-            "line": 24,
+            "line": 25,
             "description": "component name",
             "itemtype": "property",
             "name": "name",
             "type": "{String}",
             "readonly": "",
-            "class": "HTML5Video"
+            "class": "HTML5Video",
+            "module": "playback"
         },
         {
             "file": "src/playbacks/html5_video/html5_video.js",
-            "line": 31,
+            "line": 32,
             "description": "tag name",
             "itemtype": "property",
             "name": "tagName",
             "type": "{String}",
-            "class": "HTML5Video"
+            "class": "HTML5Video",
+            "module": "playback"
         },
         {
             "file": "src/playbacks/html5_video/html5_video.js",
-            "line": 37,
+            "line": 38,
             "description": "template for the component",
             "itemtype": "property",
             "name": "template",
             "type": "{Object}",
-            "class": "HTML5Video"
+            "class": "HTML5Video",
+            "module": "playback"
         },
         {
             "file": "src/playbacks/html5_video/html5_video.js",
-            "line": 44,
+            "line": 45,
             "description": "data attributes (k,v) for the component",
             "itemtype": "property",
             "name": "attributes",
             "type": "{Object}",
-            "class": "HTML5Video"
+            "class": "HTML5Video",
+            "module": "playback"
         },
         {
             "file": "src/playbacks/html5_video/html5_video.js",
-            "line": 55,
+            "line": 56,
             "description": "events binding",
             "itemtype": "property",
             "name": "events",
             "type": "{Object}",
-            "class": "HTML5Video"
+            "class": "HTML5Video",
+            "module": "playback"
         },
         {
             "file": "src/playbacks/html5_video/html5_video.js",
-            "line": 77,
+            "line": 78,
             "description": "constructor.",
             "itemtype": "method",
             "name": "constructor",
@@ -259,21 +337,23 @@
                     "type": "Object"
                 }
             ],
-            "class": "HTML5Video"
+            "class": "HTML5Video",
+            "module": "playback"
         },
         {
             "file": "src/playbacks/html5_video/html5_video.js",
-            "line": 101,
+            "line": 102,
             "description": "Safari needs to be initialized with `preload` set to 'auto'",
             "itemtype": "method",
             "name": "setupSafari",
             "access": "private",
             "tagname": "",
-            "class": "HTML5Video"
+            "class": "HTML5Video",
+            "module": "playback"
         },
         {
             "file": "src/playbacks/html5_video/html5_video.js",
-            "line": 111,
+            "line": 112,
             "description": "This is called when loadedmetadata is fired by tag video.",
             "itemtype": "method",
             "name": "loadedMetadata",
@@ -288,7 +368,8 @@
                 "description": "Returns true on success",
                 "type": "Boolean"
             },
-            "class": "HTML5Video"
+            "class": "HTML5Video",
+            "module": "playback"
         }
     ],
     "warnings": [
