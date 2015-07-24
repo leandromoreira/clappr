@@ -11,7 +11,32 @@ var Events = require('events')
 var uniqueId = require('../base/utils').uniqueId
 var PlayerInfo = require('./player_info')
 
+/**
+ * @class Player
+ * @constructor
+ * @extends BaseObject
+ * @module components
+ * @example
+ *     // Creates an instance:
+ *     var player = new Clappr.Player({source: "http://your.video/here.mp4", parentId: "#player"});
+ */
 class Player extends BaseObject {
+
+  /**
+   * constructor.
+   *
+   * @method constructor
+   * @param {Object} options Data
+   * to configure player instance
+   * @param {Boolean} [options.autoPlay]
+   * @default false
+   * if you want the video to automatically play after page load.
+   * @param {Boolean} [options.mute]
+   * @default false
+   * if you want the video to start muted.
+   * @param {String} [options.poster]
+   * Define a poster by adding its address `http://url/img.png` on your embed parameters. It will appear after video embed, disappear on play and go back when user stops the video.
+   */
   constructor(options) {
     super(options)
     window.p = this
@@ -33,6 +58,13 @@ class Player extends BaseObject {
     }
   }
 
+  /**
+   * attach player to element
+   *
+   * @method attachTo
+   * @param {Object} element Data
+   * You can use this method to attach the player to a given `element`. You don't need to do this when you specify it during the player instantiation passing the parentId param.
+   */
   attachTo(element) {
     this.options.parentElement = element
     this.core = this.coreFactory.create()

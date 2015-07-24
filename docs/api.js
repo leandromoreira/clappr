@@ -4,16 +4,22 @@ YUI.add("yuidoc-meta", function(Y) {
         "Events",
         "HLS",
         "HTML5Video",
-        "Playback"
+        "Playback",
+        "Player"
     ],
     "modules": [
         "base",
+        "components",
         "playback"
     ],
     "allModules": [
         {
             "displayName": "base",
             "name": "base"
+        },
+        {
+            "displayName": "components",
+            "name": "components"
         },
         {
             "displayName": "playback",

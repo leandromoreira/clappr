@@ -69,6 +69,17 @@
             "fors": {},
             "namespaces": {}
         },
+        "src/components/player.js": {
+            "name": "src/components/player.js",
+            "modules": {
+                "components": 1
+            },
+            "classes": {
+                "Player": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "src/playbacks/hls/hls.js": {
             "name": "src/playbacks/hls/hls.js",
             "modules": {
@@ -103,6 +114,18 @@
             "tag": "module",
             "file": "src/base/playback.js",
             "line": 4
+        },
+        "components": {
+            "name": "components",
+            "submodules": {},
+            "classes": {
+                "Player": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/components/player.js",
+            "line": 14
         },
         "playback": {
             "name": "playback",
@@ -149,6 +172,24 @@
             "line": 4,
             "is_constructor": 1,
             "extends": "UIObject"
+        },
+        "Player": {
+            "name": "Player",
+            "shortname": "Player",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "components",
+            "namespace": "",
+            "file": "src/components/player.js",
+            "line": 14,
+            "is_constructor": 1,
+            "extends": "BaseObject",
+            "example": [
+                "\n    // Creates an instance:\n    var player = new Clappr.Player({source: \"http://your.video/here.mp4\", parentId: \"#player\"});"
+            ]
         },
         "HLS": {
             "name": "HLS",
@@ -235,43 +276,96 @@
             "file": "src/components/container/container.js",
             "line": 5,
             "description": "Container is responsible for the video rendering and state",
-            "class": "HLS",
+            "class": "Player",
             "module": "base"
         },
         {
             "file": "src/components/container_factory/container_factory.js",
             "line": 5,
             "description": "The ContainerFactory is responsible for manage playback bootstrap and create containers.",
-            "class": "HLS",
+            "class": "Player",
             "module": "base"
         },
         {
             "file": "src/components/core/core.js",
             "line": 5,
             "description": "The Core is responsible to manage Containers, the mediator, MediaControl\nand the player state.",
-            "class": "HLS",
+            "class": "Player",
             "module": "base"
         },
         {
             "file": "src/components/core_factory/core_factory.js",
             "line": 5,
             "description": "The Core Factory is responsible for instantiate the core and it's plugins.",
-            "class": "HLS",
+            "class": "Player",
             "module": "base"
         },
         {
             "file": "src/components/media_control/media_control.js",
             "line": 5,
             "description": "The MediaControl is responsible for displaying the Player controls.",
-            "class": "HLS",
+            "class": "Player",
             "module": "base"
         },
         {
             "file": "src/components/mediator.js",
             "line": 5,
             "description": "The mediator is a singleton for handling global events.",
-            "class": "HLS",
+            "class": "Player",
             "module": "base"
+        },
+        {
+            "file": "src/components/player.js",
+            "line": 25,
+            "description": "constructor.",
+            "itemtype": "method",
+            "name": "constructor",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "Data\nto configure player instance",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "autoPlay",
+                            "description": "",
+                            "type": "Boolean",
+                            "optional": true
+                        },
+                        {
+                            "name": "mute",
+                            "description": "",
+                            "type": "Boolean",
+                            "optional": true
+                        },
+                        {
+                            "name": "poster",
+                            "description": "\nDefine a poster by adding its address `http://url/img.png` on your embed parameters. It will appear after video embed, disappear on play and go back when user stops the video.",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "default": "false\nif you want the video to start muted.",
+            "class": "Player",
+            "module": "components"
+        },
+        {
+            "file": "src/components/player.js",
+            "line": 61,
+            "description": "attach player to element",
+            "itemtype": "method",
+            "name": "attachTo",
+            "params": [
+                {
+                    "name": "element",
+                    "description": "Data\nYou can use this method to attach the player to a given `element`. You don't need to do this when you specify it during the player instantiation passing the parentId param.",
+                    "type": "Object"
+                }
+            ],
+            "class": "Player",
+            "module": "components"
         },
         {
             "file": "src/playbacks/html5_video/html5_video.js",

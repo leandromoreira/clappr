@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>src/components/mediator.js - Clappr</title>
+    <title>components - Clappr</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -82,53 +82,37 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1 class="file-heading">File: src/components/mediator.js</h1>
+<h1>components Module</h1>
+<div class="box clearfix meta">
 
-<div class="file">
-    <pre class="code prettyprint linenums">
-// Copyright 2014 Globo.com Player authors. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
 
-/**
- * The mediator is a singleton for handling global events.
- */
+        <div class="foundat">
+            Defined in: <a href="../files/src_components_player.js.html#l14"><code>src&#x2F;components&#x2F;player.js:14</code></a>
+        </div>
 
-var Events = require(&#x27;../base/events&#x27;)
+</div>
 
-var events = new Events()
 
-class Mediator {
-}
+<div class="box intro">
+    
+</div>
 
-Mediator.on = function(name, callback, context) {
-  events.on(name, callback, context)
-  return
-}
 
-Mediator.once = function(name, callback, context) {
-  events.once(name, callback, context)
-  return
-}
+<div class="yui3-g">
+    <div class="yui3-u-1-2">
+            <p>This module provides the following classes:</p>
 
-Mediator.off = function(name, callback, context) {
-  events.off(name, callback, context)
-  return
-}
+            <ul class="module-classes">
+                <li class="module-class">
+                    <a href="../classes/Player.html">
+                        Player
+                    </a>
+                </li>
+            </ul>
+    </div>
 
-Mediator.trigger = function(name, opts) {
-  events.trigger.apply(events, Array.prototype.slice.call(arguments))
-  return
-}
-
-Mediator.stopListening = function(obj, name, callback) {
-  events.stopListening(obj, name, callback)
-  return
-}
-
-module.exports = Mediator
-
-    </pre>
+    <div class="yui3-u-1-2">
+    </div>
 </div>
                     </div>
                 </div>

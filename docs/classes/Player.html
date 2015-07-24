@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>HLS - Clappr</title>
+    <title>Player - Clappr</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -82,18 +82,18 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1>HLS Class</h1>
+<h1>Player Class</h1>
 <div class="box meta">
 
         <div class="extends">
-            Extends <a href="../classes/Playback.html" class="crosslink">Playback</a>
+            Extends BaseObject
         </div>
 
         <div class="foundat">
-            Defined in: <a href="../files/src_playbacks_hls_hls.js.html#l20"><code>src&#x2F;playbacks&#x2F;hls&#x2F;hls.js:20</code></a>
+            Defined in: <a href="../files/src_components_player.js.html#l14"><code>src&#x2F;components&#x2F;player.js:14</code></a>
         </div>
 
-            Module: <a href="../modules/playback.html">playback</a>
+            Module: <a href="../modules/components.html">components</a>
 
 </div>
 
@@ -104,8 +104,8 @@
 
     <div class="constructor">
         <h2>Constructor</h2>
-<div id="method_HLS" class="method item">
-    <h3 class="name"><code>HLS</code></h3>
+<div id="method_Player" class="method item">
+    <h3 class="name"><code>Player</code></h3>
 
         <span class="paren">()</span>
 
@@ -119,7 +119,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_playbacks_hls_hls.js.html#l20"><code>src&#x2F;playbacks&#x2F;hls&#x2F;hls.js:20</code></a>
+        <a href="../files/src_components_player.js.html#l14"><code>src&#x2F;components&#x2F;player.js:14</code></a>
         </p>
 
 
@@ -137,9 +137,8 @@
             <h4>Example:</h4>
 
             <div class="example-content">
-                <pre class="code prettyprint"><code>var video = new HTML5Video({src: 'http://example.com/example.mpd'})
-//starts to play the video
-video.play()</code></pre>
+                <pre class="code prettyprint"><code>// Creates an instance:
+var player = new Clappr.Player({source: &quot;http://your.video/here.mp4&quot;, parentId: &quot;#player&quot;});</code></pre>
 
             </div>
         </div>
@@ -161,12 +160,12 @@ video.play()</code></pre>
                     <h3>Methods</h3>
 
                     <ul class="index-list methods extends">
-                            <li class="index-item method inherited">
-                                <a href="#method_constructor">constructor</a>
+                            <li class="index-item method">
+                                <a href="#method_attachTo">attachTo</a>
 
                             </li>
-                            <li class="index-item method inherited">
-                                <a href="#method_play">play</a>
+                            <li class="index-item method">
+                                <a href="#method_constructor">constructor</a>
 
                             </li>
                     </ul>
@@ -179,13 +178,13 @@ video.play()</code></pre>
             <div id="methods" class="api-class-tabpanel">
                 <h2 class="off-left">Methods</h2>
 
-<div id="method_constructor" class="method item inherited">
-    <h3 class="name"><code>constructor</code></h3>
+<div id="method_attachTo" class="method item">
+    <h3 class="name"><code>attachTo</code></h3>
 
         <div class="args">
             <span class="paren">(</span><ul class="args-list inline commas">
                 <li class="arg">
-                        <code>general</code>
+                        <code>element</code>
                 </li>
             </ul><span class="paren">)</span>
         </div>
@@ -198,9 +197,64 @@ video.play()</code></pre>
 
 
     <div class="meta">
-                <p>Inherited from
-                <a href="../classes/Playback.html#method_constructor">Playback</a>:
-        <a href="../files/src_base_playback.js.html#l11"><code>src&#x2F;base&#x2F;playback.js:11</code></a>
+                <p>
+                Defined in
+        <a href="../files/src_components_player.js.html#l61"><code>src&#x2F;components&#x2F;player.js:61</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>attach player to element</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">element</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+
+                    <div class="param-description">
+                        <p>Data
+You can use this method to attach the player to a given <code>element</code>. You don't need to do this when you specify it during the player instantiation passing the parentId param.</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_constructor" class="method item">
+    <h3 class="name"><code>constructor</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>options</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_components_player.js.html#l25"><code>src&#x2F;components&#x2F;player.js:25</code></a>
         </p>
 
 
@@ -217,49 +271,52 @@ video.play()</code></pre>
 
             <ul class="params-list">
                 <li class="param">
-                        <code class="param-name">general</code>
+                        <code class="param-name">options</code>
                         <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
 
 
                     <div class="param-description">
-                        <p>options</p>
+                        <p>Data
+to configure player instance</p>
 
                     </div>
 
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name optional">[autoPlay]</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[mute]</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name optional">[poster]</code>
+                                    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                                    <span class="flag optional" title="This parameter is optional.">optional</span>
+
+                                <div class="param-description">
+                                    <p>Define a poster by adding its address <code>http://url/img.png</code> on your embed parameters. It will appear after video embed, disappear on play and go back when user stops the video.</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
                 </li>
             </ul>
         </div>
-
-
-
-</div>
-<div id="method_play" class="method item inherited">
-    <h3 class="name"><code>play</code></h3>
-
-        <span class="paren">()</span>
-
-
-
-
-
-
-
-
-    <div class="meta">
-                <p>Inherited from
-                <a href="../classes/Playback.html#method_play">Playback</a>:
-        <a href="../files/src_base_playback.js.html#l22"><code>src&#x2F;base&#x2F;playback.js:22</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        <p>play.</p>
-
-    </div>
-
 
 
 
