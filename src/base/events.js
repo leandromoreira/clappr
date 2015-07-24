@@ -8,6 +8,14 @@ var Log = require('../plugins/log').getInstance()
 
 var slice = Array.prototype.slice
 
+/**
+ * @class Events
+ * @constructor
+ * @example
+ *     var video = new HTML5Video({src: 'http://example.com/example.mpd'})
+ *     //starts to play the video
+ *     video.play()
+ */
 class Events {
   on(name, callback, context) {
     if (!eventsApi(this, 'on', name, [callback, context]) || !callback) return this
@@ -203,8 +211,18 @@ Events.MEDIACONTROL_SHOW = 'mediacontrol:show'
 Events.MEDIACONTROL_HIDE = 'mediacontrol:hide'
 Events.MEDIACONTROL_MOUSEMOVE_SEEKBAR = 'mediacontrol:mousemove:seekbar'
 Events.MEDIACONTROL_MOUSELEAVE_SEEKBAR = 'mediacontrol:mouseleave:seekbar'
+/**
+ * Fired when an media control starts to play
+ *
+ * @event MEDIACONTROL_PLAYING
+ */
 Events.MEDIACONTROL_PLAYING = 'mediacontrol:playing'
 Events.MEDIACONTROL_NOTPLAYING = 'mediacontrol:notplaying'
+/**
+ * Fired when an media control container changes
+ *
+ * @event MEDIACONTROL_CONTAINERCHANGED
+ */
 Events.MEDIACONTROL_CONTAINERCHANGED = 'mediacontrol:containerchanged'
 
 module.exports = Events

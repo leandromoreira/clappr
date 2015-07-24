@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HTML5Video - Clappr</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="https://cloud.githubusercontent.com/assets/244265/6373134/a845eb50-bce7-11e4-80f2-592ba29972ab.png" title="Clappr"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.2.38</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/Events.html">Events</a></li>
+                                <li><a href="../classes/HTML5Video.html">HTML5Video</a></li>
+                                <li><a href="../classes/Playback.html">Playback</a></li>
+                            </ul>
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>HTML5Video Class</h1>
+<div class="box meta">
+
+        <div class="extends">
+            Extends <a href="../classes/Playback.html" class="crosslink">Playback</a>
+        </div>
+
+        <div class="foundat">
+            Defined in: <a href="../files/src_playbacks_html5_video_html5_video.js.html#l13"><code>src&#x2F;playbacks&#x2F;html5_video&#x2F;html5_video.js:13</code></a>
+        </div>
+
+
+</div>
+
+
+<div class="box intro">
+    
+</div>
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+<div id="method_HTML5Video" class="method item">
+    <h3 class="name"><code>HTML5Video</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_playbacks_html5_video_html5_video.js.html#l13"><code>src&#x2F;playbacks&#x2F;html5_video&#x2F;html5_video.js:13</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+
+
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <pre class="code prettyprint"><code>var video = new HTML5Video({src: 'http://example.com/example.mpd'})
+//starts to play the video
+video.play()</code></pre>
+
+            </div>
+        </div>
+</div>
+    </div>
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods extends">
+                            <li class="index-item method inherited">
+                                <a href="#method_constructor">constructor</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadedMetadata">loadedMetadata</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_play">play</a>
+
+                            </li>
+                            <li class="index-item method private">
+                                <a href="#method_setupSafari">setupSafari</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties extends">
+                            <li class="index-item property">
+                                <a href="#property_attributes">attributes</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_events">events</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_name">name</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_tagName">tagName</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_template">template</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_constructor" class="method item">
+    <h3 class="name"><code>constructor</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>general</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+            <p>Inherited from
+            <a href="../classes/Playback.html#method_constructor">
+                Playback
+            </a>
+            but overwritten in
+        <a href="../files/src_playbacks_html5_video_html5_video.js.html#l77"><code>src&#x2F;playbacks&#x2F;html5_video&#x2F;html5_video.js:77</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>constructor.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">general</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+
+                    <div class="param-description">
+                        <p>options</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadedMetadata" class="method item">
+    <h3 class="name"><code>loadedMetadata</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_playbacks_html5_video_html5_video.js.html#l111"><code>src&#x2F;playbacks&#x2F;html5_video&#x2F;html5_video.js:111</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>This is called when loadedmetadata is fired by tag video.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+
+
+                    <div class="param-description">
+                        <p>An event handler</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+                    <p>Returns true on success</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_play" class="method item inherited">
+    <h3 class="name"><code>play</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/Playback.html#method_play">Playback</a>:
+        <a href="../files/src_base_playback.js.html#l22"><code>src&#x2F;base&#x2F;playback.js:22</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>play.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_setupSafari" class="method item private">
+    <h3 class="name"><code>setupSafari</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_playbacks_html5_video_html5_video.js.html#l101"><code>src&#x2F;playbacks&#x2F;html5_video&#x2F;html5_video.js:101</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Safari needs to be initialized with <code>preload</code> set to 'auto'</p>
+
+    </div>
+
+
+
+
+</div>
+            </div>
+
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+                    <div id="property_attributes" class="property item">
+                        <h3 class="name"><code>attributes</code></h3>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/src_playbacks_html5_video_html5_video.js.html#l44"><code>src&#x2F;playbacks&#x2F;html5_video&#x2F;html5_video.js:44</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>data attributes (k,v) for the component</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_events" class="property item">
+                        <h3 class="name"><code>events</code></h3>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/src_playbacks_html5_video_html5_video.js.html#l55"><code>src&#x2F;playbacks&#x2F;html5_video&#x2F;html5_video.js:55</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>events binding</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_name" class="property item">
+                        <h3 class="name"><code>name</code></h3>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/src_playbacks_html5_video_html5_video.js.html#l24"><code>src&#x2F;playbacks&#x2F;html5_video&#x2F;html5_video.js:24</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>component name</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_tagName" class="property item">
+                        <h3 class="name"><code>tagName</code></h3>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/src_playbacks_html5_video_html5_video.js.html#l31"><code>src&#x2F;playbacks&#x2F;html5_video&#x2F;html5_video.js:31</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>tag name</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+                    <div id="property_template" class="property item">
+                        <h3 class="name"><code>template</code></h3>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+                    
+                    
+                    
+                    
+                    
+                        <div class="meta">
+                                    <p>
+                                    Defined in
+                            <a href="../files/src_playbacks_html5_video_html5_video.js.html#l37"><code>src&#x2F;playbacks&#x2F;html5_video&#x2F;html5_video.js:37</code></a>
+                            </p>
+                    
+                    
+                        </div>
+                    
+                        <div class="description">
+                            <p>template for the component</p>
+                    
+                        </div>
+                    
+                    
+                    
+                    </div>
+            </div>
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

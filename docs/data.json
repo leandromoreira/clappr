@@ -1,0 +1,320 @@
+{
+    "project": {
+        "name": "Clappr",
+        "description": "An extensible media player for the web",
+        "version": "0.2.38",
+        "url": "https://github.com/clappr/clappr",
+        "logo": "https://cloud.githubusercontent.com/assets/244265/6373134/a845eb50-bce7-11e4-80f2-592ba29972ab.png"
+    },
+    "files": {
+        "src/base/events.js": {
+            "name": "src/base/events.js",
+            "modules": {},
+            "classes": {
+                "Events": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/base/playback.js": {
+            "name": "src/base/playback.js",
+            "modules": {},
+            "classes": {
+                "Playback": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/components/container/container.js": {
+            "name": "src/components/container/container.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/components/container_factory/container_factory.js": {
+            "name": "src/components/container_factory/container_factory.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/components/core/core.js": {
+            "name": "src/components/core/core.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/components/core_factory/core_factory.js": {
+            "name": "src/components/core_factory/core_factory.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/components/media_control/media_control.js": {
+            "name": "src/components/media_control/media_control.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/components/mediator.js": {
+            "name": "src/components/mediator.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/playbacks/html5_video/html5_video.js": {
+            "name": "src/playbacks/html5_video/html5_video.js",
+            "modules": {},
+            "classes": {
+                "HTML5Video": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Events": {
+            "name": "Events",
+            "shortname": "Events",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/base/events.js",
+            "line": 11,
+            "is_constructor": 1,
+            "example": [
+                "\n    var video = new HTML5Video({src: 'http://example.com/example.mpd'})\n    //starts to play the video\n    video.play()"
+            ]
+        },
+        "Playback": {
+            "name": "Playback",
+            "shortname": "Playback",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/base/playback.js",
+            "line": 4,
+            "is_constructor": 1,
+            "extends": "UIObject"
+        },
+        "HTML5Video": {
+            "name": "HTML5Video",
+            "shortname": "HTML5Video",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/playbacks/html5_video/html5_video.js",
+            "line": 13,
+            "is_constructor": 1,
+            "extends": "Playback",
+            "example": [
+                "\n    var video = new HTML5Video({src: 'http://example.com/example.mpd'})\n    //starts to play the video\n    video.play()"
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/base/events.js",
+            "line": 214,
+            "description": "Fired when an media control starts to play",
+            "itemtype": "event",
+            "name": "MEDIACONTROL_PLAYING",
+            "class": "Events"
+        },
+        {
+            "file": "src/base/events.js",
+            "line": 221,
+            "description": "Fired when an media control container changes",
+            "itemtype": "event",
+            "name": "MEDIACONTROL_CONTAINERCHANGED",
+            "class": "Events"
+        },
+        {
+            "file": "src/base/playback.js",
+            "line": 11,
+            "description": "constructor.",
+            "itemtype": "method",
+            "name": "constructor",
+            "params": [
+                {
+                    "name": "general",
+                    "description": "options",
+                    "type": "Object"
+                }
+            ],
+            "class": "Playback"
+        },
+        {
+            "file": "src/base/playback.js",
+            "line": 22,
+            "description": "play.",
+            "itemtype": "method",
+            "name": "play",
+            "class": "Playback"
+        },
+        {
+            "file": "src/components/container/container.js",
+            "line": 5,
+            "description": "Container is responsible for the video rendering and state",
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/components/container_factory/container_factory.js",
+            "line": 5,
+            "description": "The ContainerFactory is responsible for manage playback bootstrap and create containers.",
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/components/core/core.js",
+            "line": 5,
+            "description": "The Core is responsible to manage Containers, the mediator, MediaControl\nand the player state.",
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/components/core_factory/core_factory.js",
+            "line": 5,
+            "description": "The Core Factory is responsible for instantiate the core and it's plugins.",
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/components/media_control/media_control.js",
+            "line": 5,
+            "description": "The MediaControl is responsible for displaying the Player controls.",
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/components/mediator.js",
+            "line": 5,
+            "description": "The mediator is a singleton for handling global events.",
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/playbacks/html5_video/html5_video.js",
+            "line": 24,
+            "description": "component name",
+            "itemtype": "property",
+            "name": "name",
+            "type": "{String}",
+            "readonly": "",
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/playbacks/html5_video/html5_video.js",
+            "line": 31,
+            "description": "tag name",
+            "itemtype": "property",
+            "name": "tagName",
+            "type": "{String}",
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/playbacks/html5_video/html5_video.js",
+            "line": 37,
+            "description": "template for the component",
+            "itemtype": "property",
+            "name": "template",
+            "type": "{Object}",
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/playbacks/html5_video/html5_video.js",
+            "line": 44,
+            "description": "data attributes (k,v) for the component",
+            "itemtype": "property",
+            "name": "attributes",
+            "type": "{Object}",
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/playbacks/html5_video/html5_video.js",
+            "line": 55,
+            "description": "events binding",
+            "itemtype": "property",
+            "name": "events",
+            "type": "{Object}",
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/playbacks/html5_video/html5_video.js",
+            "line": 77,
+            "description": "constructor.",
+            "itemtype": "method",
+            "name": "constructor",
+            "params": [
+                {
+                    "name": "general",
+                    "description": "options",
+                    "type": "Object"
+                }
+            ],
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/playbacks/html5_video/html5_video.js",
+            "line": 101,
+            "description": "Safari needs to be initialized with `preload` set to 'auto'",
+            "itemtype": "method",
+            "name": "setupSafari",
+            "access": "private",
+            "tagname": "",
+            "class": "HTML5Video"
+        },
+        {
+            "file": "src/playbacks/html5_video/html5_video.js",
+            "line": 111,
+            "description": "This is called when loadedmetadata is fired by tag video.",
+            "itemtype": "method",
+            "name": "loadedMetadata",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "An event handler",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Returns true on success",
+                "type": "Boolean"
+            },
+            "class": "HTML5Video"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nContainer is responsible for the video rendering and state",
+            "line": " src/components/container/container.js:5"
+        },
+        {
+            "message": "Missing item type\nThe ContainerFactory is responsible for manage playback bootstrap and create containers.",
+            "line": " src/components/container_factory/container_factory.js:5"
+        },
+        {
+            "message": "Missing item type\nThe Core is responsible to manage Containers, the mediator, MediaControl\nand the player state.",
+            "line": " src/components/core/core.js:5"
+        },
+        {
+            "message": "Missing item type\nThe Core Factory is responsible for instantiate the core and it's plugins.",
+            "line": " src/components/core_factory/core_factory.js:5"
+        },
+        {
+            "message": "Missing item type\nThe MediaControl is responsible for displaying the Player controls.",
+            "line": " src/components/media_control/media_control.js:5"
+        },
+        {
+            "message": "Missing item type\nThe mediator is a singleton for handling global events.",
+            "line": " src/components/mediator.js:5"
+        }
+    ]
+}

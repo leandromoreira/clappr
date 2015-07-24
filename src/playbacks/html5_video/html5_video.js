@@ -10,17 +10,53 @@ var seekStringToSeconds = require('../../base/utils').seekStringToSeconds
 var Events = require('../../base/events')
 var find = require('lodash.find')
 
+/**
+ * @class HTML5Video
+ * @constructor
+ * @extends Playback
+ * @example
+ *     var video = new HTML5Video({src: 'http://example.com/example.mpd'})
+ *     //starts to play the video
+ *     video.play()
+ */
+
 class HTML5Video extends Playback {
+  /**
+   * component name
+   * @property name
+   * @type {String}
+   * @readOnly
+   */
   get name() { return 'html5_video' }
+  /**
+   * tag name
+   * @property tagName
+   * @type {String}
+   */
   get tagName() { return 'video' }
+  /**
+   * template for the component
+   * @property template
+   * @type {Object}
+   */
   get template() { return JST.html5_video }
 
+  /**
+   * data attributes (k,v) for the component
+   * @property attributes
+   * @type {Object}
+   */
   get attributes() {
     return {
       'data-html5-video': ''
     }
   }
 
+  /**
+   * events binding
+   * @property events
+   * @type {Object}
+   */
   get events() {
     return {
       'timeupdate': 'timeUpdated',
@@ -38,6 +74,12 @@ class HTML5Video extends Playback {
     }
   }
 
+  /**
+   * constructor.
+   *
+   * @method constructor
+   * @param {Object} general options
+   */
   constructor(options) {
     super(options)
     this.options = options
@@ -56,10 +98,23 @@ class HTML5Video extends Playback {
     this.settings.right = ["fullscreen", "volume"]
   }
 
+  /**
+   * Safari needs to be initialized with `preload` set to 'auto'
+   *
+   * @method setupSafari
+   * @private
+   */
   setupSafari() {
     this.el.preload = 'auto'
   }
 
+  /**
+   * This is called when loadedmetadata is fired by tag video.
+   *
+   * @method loadedMetadata
+   * @param {Object} e An event handler
+   * @return {Boolean} Returns true on success
+   */
   loadedMetadata(e) {
     this.durationChange()
     this.trigger(Events.PLAYBACK_LOADEDMETADATA, e.target.duration)

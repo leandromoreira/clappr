@@ -1,12 +1,29 @@
 var UIObject = require('./ui_object')
 var extend = require('./utils').extend
 
+/**
+ * @class Playback
+ * @constructor
+ * @extends UIObject
+ */
+
 class Playback extends UIObject {
+  /**
+   * constructor.
+   *
+   * @method constructor
+   * @param {Object} general options
+   */
   constructor(options) {
     super(options)
     this.settings = {}
   }
 
+  /**
+   * play.
+   *
+   * @method play
+   */
   play() {}
 
   pause() {}
